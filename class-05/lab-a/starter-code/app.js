@@ -108,11 +108,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+let multiplication2 = multiply(multArr[0],multArr[1])[0];
+multiplication2 = multiply(multiplication2, multArr[2])[0];
+let msg3 = 'The numbers' + multArr[0] + ','+ multArr[1] + ',' + multArr[2] + 'have product of' + multiplication2 + '.';
+return [multiplication2, msg3]
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -136,7 +139,6 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
