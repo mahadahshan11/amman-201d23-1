@@ -13,6 +13,7 @@ function sum(a, b) { //eslint-disable-line
   let msg ='The sum of '+ a +' and '+ b +' is '+ sum +'.';
   return [sum, msg]
 }
+
 console.log( sum(4, 11));
 
 // Here is the test for sum(); uncomment it to run it
@@ -34,6 +35,7 @@ function multiply(a, b) { //eslint-disable-line
  let msg = 'The product of ' + a + ' and ' + b + ' is ' + multiply + '.';
  return [multiply, msg]
 }
+
 console.log (multiply (5,9));
 // Here is the test for multiply(); uncomment it to run it
 testMultiply(5,9);
@@ -52,15 +54,19 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
+function sumAndMultiply(a, b, c) { //eslint-disable-line
+let summnation1 =sum(a, b)[0];
+ summnation1 =sum(summnation1,c)[0];
+ let msg = (a + 'and' + b + 'and'+ c + 'sum to' + summnation1 + '.')
+let multiplication1 =multiply(a, b)[0];
+ multiplication1 =multiply(multiplication1,c)[0];
+let msg1 = ('The product of'+ a +'and'+ b + 'and'+ c + 'is'+  multiplication1 + '.')
+return [summnation1, multiplication1, msg, msg1 ]
+}
 //function sumAndMultiply(a, b, c) { //eslint-disable-line
-  //let = sum + multiply;
-  //let msg =( sum + multiply + a + b + 'and'+ c + 'sum'+ 'to' + sum + 'the product of' + a + b + c+ 'is' +multiply)
-  //return [sumAndMultipl, msg]
-//}
-//function sumAndMultiply(a, b, c) { //eslint-disable-line
-//console.log (sumAndMultiply (4,7,5));
+console.log (sumAndMultiply (4,7,5));
 // Here is the test for sumAndMultiply(); uncomment it to run it
-//testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
